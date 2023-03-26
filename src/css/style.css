@@ -30,8 +30,12 @@ body {
     left: 50%;
     transform: translateX(-50%);
     top: -30px;
-    box-shadow: 0 10px 16px #5487874d;
+    box-shadow: 0 10px 16px #5896963a;
     padding: 18px 20px;
+}
+
+.filter.hidden {
+    visibility: hidden;
 }
 
 .filtered.tags {
@@ -63,7 +67,12 @@ body {
     background-size: 10px;
     height: 100%;
     width: 24px;
+    transition: 0.09s ease-in-out;
+}
 
+.filtered.tags .tag .remove:hover {
+    background-color: #000;
+    cursor: pointer;
 }
 
 .clear.btn {
@@ -73,6 +82,10 @@ body {
     cursor: pointer;
     position: absolute;
     right: 20px;
+}
+
+.clear.btn:hover {
+    text-decoration: underline;
 }
 
 .jobs.container {
@@ -90,11 +103,16 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 20px 30px;
-    box-shadow: 0 10px 16px #5487874d;
+    box-shadow: 0 10px 16px #5896963a;
+}
+
+.job.hidden {
+    display: none;
 }
 
 .job.featured {
     border-left: 4px solid var(--primary-cyan);
+    order: -1;
 }
 
 .job .info {
@@ -148,6 +166,12 @@ body {
 .job .info .content .role h1 {
     color: #000;
     font-size: 18px;
+    transition: 0.09s ease-in-out;
+}
+
+.job .info .content .role h1:hover {
+    color: var(--primary-cyan);
+    cursor: pointer;
 }
 
 .job .info .content .extra p {
@@ -163,4 +187,11 @@ body {
 .jobs .skill {
     background-color: var(--bg-gray-cyan);
     padding: 7px;
+    transition: 0.09s ease-in-out;
+}
+
+.jobs .skill:hover {
+    background-color: var(--primary-cyan);
+    color: var(--bg-gray-cyan);
+    cursor: pointer;
 }
