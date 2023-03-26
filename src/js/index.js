@@ -411,7 +411,6 @@ skills.forEach( skill => {
                 if (filteredTagsNames.length === 0) {
                     containerFilter.classList.add("hidden");
                 }
-                console.log(filteredTagsNames.length);
 
                 filter(filteredTagsNamesArray);
             })
