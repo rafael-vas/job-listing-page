@@ -1,0 +1,153 @@
+@media screen and (max-width: 1024px) {
+
+    .main {
+        width: 90%;
+        padding: 50px 0;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .job .skills {
+        justify-content: end;
+        align-items: flex-end;
+        max-width: 250px;
+        flex-wrap: wrap;
+    }
+
+    .filter {
+        height: fit-content;
+    }
+
+    .filtered.tags {
+        padding-right: 40px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .filter .filtered.tag .remove {
+        height: 24px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .main {
+        padding-top: 100px;
+    }
+
+    .jobs.container {
+        gap: 50px;
+    }
+
+    .job {
+        flex-direction: column;
+        height: 180px;
+        position: relative;
+        padding-bottom: 0;
+        /* align-items: flex-start; */
+    }
+
+    .job .info, .job .skills {
+        flex: 1;
+    }
+
+    .job .info {
+        flex-direction: column;
+    }
+
+    .job .info .content {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .job .info .logo {
+        top: -20px;
+        left: 30px;
+        position: absolute;
+        width: 120px;
+        height: 120px;
+    }
+
+    .job .skills {
+        align-items: center;
+        flex-wrap: nowrap;
+        max-width: fit-content;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .main {
+        padding-top: 130px;
+    }
+
+    .job .info .logo {
+        top: -20px;
+        left: 25px;
+        position: absolute;
+        width: 90px;
+        height: 90px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .job {
+        align-items: end;
+    }
+}
+
+@media screen and (max-width: 468px) {
+
+    .job {
+        height: 235px;
+        align-items: start;
+        padding-bottom: 15px;
+        position: relative;
+    }
+
+    .job .info .logo {
+        top: -25px;
+        left: 25px;
+        position: absolute;
+        width: 55px;
+        height: 55px;
+    }
+
+    .job .skills {
+        flex-wrap: wrap;
+        justify-content: start;
+        max-height: 70px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .job {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .job .info .content .role h1 {
+        font-size: 16px;
+    }
+
+    .job .info {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.200);
+        width: 100%;
+        align-items: start;
+        margin-bottom: 16px;
+    }
+
+    .job .info .logo {
+        top: -20px;
+        left: 20px;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+    }
+
+}
