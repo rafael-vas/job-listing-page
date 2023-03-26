@@ -1,4 +1,4 @@
-# Frontend Mentor - Easybank landing page solution
+# Frontend Mentor - Job listings with filtering solution
 
 ## Welcome! 👋
 
