@@ -13,7 +13,7 @@ const data = [
       "location": "USA Only",
       "languages": ["HTML", "CSS", "JavaScript"],
       "tools": [],
-      "stack": ["HTML", "CSS", "JavaScript"]
+      "stack": ["Frontend", "Senior", "HTML", "CSS", "JavaScript"]
     },
     {
       "id": 2,
@@ -29,7 +29,7 @@ const data = [
       "location": "Remote",
       "languages": ["Python"],
       "tools": ["React"],
-      "stack": ["React", "Python"]
+      "stack": ["Fullstack", "Midweight", "React", "Python"]
     },
     {
       "id": 3,
@@ -45,7 +45,7 @@ const data = [
       "location": "USA Only",
       "languages": ["JavaScript"],
       "tools": ["React", "Sass"],
-      "stack": ["JavaScript", "React", "Sass"]
+      "stack": ["Frontend", "Junior", "JavaScript", "React", "Sass"]
     },
     {
       "id": 4,
@@ -61,7 +61,7 @@ const data = [
       "location": "USA Only",
       "languages": ["CSS", "JavaScript"],
       "tools": [],
-      "stack": ["CSS", "JavaScript"]
+      "stack": ["Frontend", "Junior", "CSS", "JavaScript"]
     },
     {
       "id": 5,
@@ -77,7 +77,7 @@ const data = [
       "location": "Worldwide",
       "languages": ["JavaScript"],
       "tools": ["Ruby", "Sass"],
-      "stack": ["JavaScript", "Ruby", "Sass"]
+      "stack": ["Fullstack", "Midweight", "JavaScript", "Ruby", "Sass"]
     },
     {
       "id": 6,
@@ -93,7 +93,7 @@ const data = [
       "location": "UK Only",
       "languages": ["Ruby"],
       "tools": ["RoR"],
-      "stack": ["Ruby", "RoR"]
+      "stack": ["Backend", "Junior", "Ruby", "RoR"]
     },
     {
       "id": 7,
@@ -109,7 +109,7 @@ const data = [
       "location": "Worldwide",
       "languages": ["HTML", "JavaScript"],
       "tools": ["Sass"],
-      "stack": ["HTML", "JavaScript", "Sass"]
+      "stack": ["Frontend", "Junior", "HTML", "JavaScript", "Sass"]
     },
     {
       "id": 8,
@@ -125,7 +125,7 @@ const data = [
       "location": "USA Only",
       "languages": ["JavaScript"],
       "tools": ["Vue", "Sass"],
-      "stack": ["JavaScript", "Vue", "Sass"]
+      "stack": ["Frontend", "Junior", "JavaScript", "Vue", "Sass"]
     },
     {
       "id": 9,
@@ -141,7 +141,7 @@ const data = [
       "location": "Worldwide",
       "languages": ["JavaScript", "Python"],
       "tools": ["Django"],
-      "stack": ["JavaScript", "Python", "Django"]
+      "stack": ["Fullstack", "Midweight", "JavaScript", "Python", "Django"]
     },
     {
       "id": 10,
@@ -157,24 +157,8 @@ const data = [
       "location": "Worldwide",
       "languages": ["JavaScript"],
       "tools": ["React", "Sass"],
-      "stack": ["JavaScript", "React", "Sass"]
+      "stack": ["Frontend", "Junior", "JavaScript", "React", "Sass"]
     },
-    {
-      "id": 11,
-      "company": "Teste Company",
-      "logo": "https://via.placeholder.com/80x80",
-      "new": true,
-      "featured": false,
-      "position": "Teste Developer",
-      "role": "Teste",
-      "level": "Teste",
-      "postedAt": "1sec ago",
-      "contract": "Forever",
-      "location": "Worldwide",
-      "languages": [],
-      "tools": [],
-      "stack": ["Teste", "Teste", "JavaScript"]
-    }
 ]
 
 const main = document.querySelector(".main");
@@ -230,6 +214,10 @@ for (let i = 0; i <= data.length - 1; i++) {
             <li class="skill">${
                 data[i].stack[4] ?
                 data[i].stack[4] : ''
+            }</li>
+            <li class="skill">${
+                data[i].stack[5] ?
+                data[i].stack[5] : ''
             }</li>
         </ul>
     </div>
@@ -420,6 +408,11 @@ skills.forEach( skill => {
                     filteredTagsNamesArray.push(filteredTagsNames[i].textContent)
                 }
 
+                if (filteredTagsNames.length === 0) {
+                    containerFilter.classList.add("hidden");
+                }
+                console.log(filteredTagsNames.length);
+
                 filter(filteredTagsNamesArray);
             })
 
@@ -437,4 +430,6 @@ clearBtn.addEventListener("click", () => {
 
     const cardJobs = document.querySelectorAll(".jobs.container .job");
     cardJobs.forEach(job => job.classList.remove("hidden"))
+
+    containerFilter.classList.add("hidden");
 })
